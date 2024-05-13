@@ -19,10 +19,10 @@ const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <LinkContainer to="/cart">
-                        <Nav.Link><FaShoppingCart />Cart</Nav.Link>
+                        <Nav.Link><FaShoppingCart /> Cart</Nav.Link>
                         </LinkContainer>
                         <LinkContainer to="/login">
-                        <Nav.Link><FaUser />Sign In</Nav.Link>
+                        <Nav.Link><FaUser /> Sign In</Nav.Link>
                         </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
