@@ -1,0 +1,15 @@
+{
+  "name": "proshop",
+  "version": "1.0.0",
+  "description": "eCommerce website built on MERN stack",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "author": "Dinesh Chinta",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
