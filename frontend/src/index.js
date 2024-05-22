@@ -13,6 +13,7 @@ import './assets/styles/index.css';
 import './assets/styles/bootstrap.custom.css';
 import App from './App';
 import { PayPalScriptProvider } from '@paypal/react-paypal-js';
+import { HelmetProvider } from 'react-helmet-async';
 import reportWebVitals from './reportWebVitals';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
