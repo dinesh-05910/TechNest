@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from 'react-redux';
-import { Row, Col, Table, Form, Card, Button } from 'react-bootstrap';
+import { Row, Col, Table, Form, Button } from 'react-bootstrap';
 import { toast } from "react-toastify";
 import Message from '../components/Message';
 import Loader from '../components/Loader';
