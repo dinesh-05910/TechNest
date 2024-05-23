@@ -8,6 +8,7 @@ import { useLogoutMutation } from '../slices/usersApiSlice';
 import { logout } from '../slices/authSlice';
 import SearchBox from './SearchBox';
 import logo from '../assets/logo.png'
+import icon2 from '../assets/icon2.png'
 
 const Header = () => {
 
@@ -34,8 +35,8 @@ const Header = () => {
             <Container>
                 <LinkContainer to="/">
                 <Navbar.Brand>
-                    <img src={logo} alt="ProShop" width="30" height="30" className="d-inline-block align-top"/>
-                    ProShop
+                    <img src={icon2} alt="ProShop" width="30" height="30" className="d-inline-block align-top"/>
+                    <i>roShop</i>
                 </Navbar.Brand>
                 </LinkContainer>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
