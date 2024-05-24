@@ -9,6 +9,7 @@ import { logout } from '../slices/authSlice';
 import SearchBox from './SearchBox';
 import logo from '../assets/logo.png'
 import icon2 from '../assets/icon2.png'
+import { resetCart } from '../slices/cartSlice';
 
 const Header = () => {
 
@@ -24,6 +25,7 @@ const Header = () => {
     try{
         await logoutApiCall().unwrap();
         dispatch(logout()); //For Local Storage
+        dispatch(resetCart());
         navigate('/login'); 
     }catch(err){
         console.log(err);
