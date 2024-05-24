@@ -6,7 +6,7 @@ import Message from '../components/Message';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart, removeFromCart } from '../slices/cartSlice';
 
-const CartScreen = () => {
+const Productscartscreen = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
@@ -92,4 +92,4 @@ const CartScreen = () => {
   )
 }
 
-export default CartScreen
+export default Productscartscreen
