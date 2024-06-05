@@ -41,15 +41,17 @@ TechNest is a robust shopping cart project built on the MERN stack, incorporatin
 
 ### Env Variables
 
-Rename the `.env.example` file to `.env` and add the following
+Rename the `example.env` file to `.env` and add the following
 
 ```
 NODE_ENV = development
-PORT = 5000
+PORT = 1234
 MONGO_URI = your mongodb uri
 JWT_SECRET = 'abc123'
 PAYPAL_CLIENT_ID = your paypal client id
+PAYPAL_APP_SECRET = your paypal app secret
 PAGINATION_LIMIT = 8
+PAYPAL_API_URL=https://api-m.sandbox.paypal.com
 ```
 
 Change the JWT_SECRET and PAGINATION_LIMIT to what you want
@@ -66,7 +68,7 @@ npm install
 
 ```
 
-# Run frontend (:3000) & backend (:5000)
+# Run frontend & backend 
 npm run dev
 
 # Run backend only
@@ -96,14 +98,11 @@ npm run data:destroy
 ```
 Sample User Logins
 
-admin@email.com (Admin)
-123456
+admin.1973@gmail.com (Admin)
+Admin.@1973#*!
 
-john@email.com (Customer)
-123456
-
-jane@email.com (Customer)
-123456
+test@gmail.com (Customer)
+Test#@12#@!
 ```
 
 ---
