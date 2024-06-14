@@ -3,6 +3,8 @@ import Order from "../models/orderModel.js";
 import Product from '../models/productModel.js';
 import { calcPrices } from '../utils/calcPrices.js';
 import { verifyPayPalPayment, checkIfNewTransaction } from '../utils/paypal.js';
+import sendEmailToReceiver from "../sendEmail.js";
+import User from "../models/userModel.js";
 
 // @desc Create New Order
 // @route POST /api/orders
@@ -49,7 +51,7 @@ const addOrderItems = asyncHandler(async (req, res) => {
       });
   
       const createdOrder = await order.save();
-  
+
       res.status(201).json(createdOrder);
     }
 });
@@ -104,10 +106,17 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
         update_time: req.body.update_time,
         email_address: req.body.payer.email_address,
       };
-  
+
+      //Data to send email
+      const orderId=req.params.id;
+      const receiver = await User.findById(order.user._id);
+      const receiverEmail = receiver.email;
+      const receiverName = receiver.name;
+      
       const updatedOrder = await order.save();
-  
+      sendEmailToReceiver(orderId,receiverEmail,receiverName);
       res.json(updatedOrder);
+
     } else {
       res.status(404);
       throw new Error('Order not found');

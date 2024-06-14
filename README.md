@@ -33,6 +33,7 @@ TechNest is a robust shopping cart project built on the MERN stack, incorporatin
 - Checkout process (shipping, payment method, etc)
 - PayPal / credit card integration
 - Database seeder (products & users)
+- Payment Confirmation Email
 
 ## Usage
 
@@ -52,6 +53,8 @@ PAYPAL_CLIENT_ID = your paypal client id
 PAYPAL_APP_SECRET = your paypal app secret
 PAGINATION_LIMIT = 8
 PAYPAL_API_URL=https://api-m.sandbox.paypal.com
+GOOGLE_EMAIL_ID= Add your email id
+GOOGLE_APP_ID= Add your registered app id secret
 ```
 
 Change the JWT_SECRET and PAGINATION_LIMIT to what you want
